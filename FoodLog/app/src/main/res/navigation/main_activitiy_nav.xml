@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activitiy_nav"
+    app:startDestination="@id/anaSayfaFragment">
+
+    <fragment
+        android:id="@+id/anaSayfaFragment"
+        android:name="com.mertaksoy.foodlog.AnaSayfaFragment"
+        android:label="fragment_ana_sayfa"
+        tools:layout="@layout/fragment_ana_sayfa" >
+        <action
+            android:id="@+id/action_anaSayfaFragment_to_corbaFragment"
+            app:destination="@id/corbaFragment" />
+        <action
+            android:id="@+id/action_anaSayfaFragment_to_anaYemekFragment"
+            app:destination="@id/anaYemekFragment" />
+        <action
+            android:id="@+id/action_anaSayfaFragment_to_tatliFragment"
+            app:destination="@id/tatliFragment" />
+        <action
+            android:id="@+id/action_anaSayfaFragment_to_salataFragment"
+            app:destination="@id/salataFragment" />
+        <action
+            android:id="@+id/action_anaSayfaFragment_to_burgerFragment"
+            app:destination="@id/burgerFragment" />
+        <action
+            android:id="@+id/action_anaSayfaFragment_to_icecekFragment"
+            app:destination="@id/icecekFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/corbaFragment"
+        android:name="com.mertaksoy.foodlog.CorbaFragment"
+        android:label="fragment_corba"
+        tools:layout="@layout/fragment_corba" >
+        <action
+            android:id="@+id/action_corbaFragment_to_ekleFragment"
+            app:destination="@id/ekleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/anaYemekFragment"
+        android:name="com.mertaksoy.foodlog.anaYemekFragment"
+        android:label="fragment_ana_yemek"
+        tools:layout="@layout/fragment_ana_yemek" >
+        <action
+            android:id="@+id/action_anaYemekFragment_to_ekleFragment"
+            app:destination="@id/ekleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/burgerFragment"
+        android:name="com.mertaksoy.foodlog.BurgerFragment"
+        android:label="BurgerFragment"
+        tools:layout="@layout/fragment_burger"
+
+        >
+        <action
+            android:id="@+id/action_burgerFragment_to_ekleFragment"
+            app:destination="@id/ekleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/icecekFragment"
+        android:name="com.mertaksoy.foodlog.IcecekFragment"
+        android:label="IcecekFragment"
+        tools:layout="@layout/fragment_icecek"
+
+        >
+        <action
+            android:id="@+id/action_icecekFragment_to_ekleFragment"
+            app:destination="@id/ekleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/salataFragment"
+        android:name="com.mertaksoy.foodlog.SalataFragment"
+        android:label="SalataFragment"
+        tools:layout="@layout/fragment_salata"
+        >
+        <action
+            android:id="@+id/action_salataFragment_to_ekleFragment"
+            app:destination="@id/ekleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tatliFragment"
+        android:name="com.mertaksoy.foodlog.TatliFragment"
+        android:label="TatliFragment"
+        tools:layout="@layout/fragment_tatli"
+        >
+        <action
+            android:id="@+id/action_tatliFragment_to_ekleFragment"
+            app:destination="@id/ekleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ekleFragment"
+        android:name="com.mertaksoy.foodlog.EkleFragment"
+        android:label="fragment_ekle"
+        tools:layout="@layout/fragment_ekle" >
+        <argument
+            android:name="kategori"
+            app:argType="string" />
+    </fragment>
+</navigation>
