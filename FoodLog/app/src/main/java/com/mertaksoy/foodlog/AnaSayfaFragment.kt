@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.mertaksoy.foodlog.databinding.FragmentAnaSayfaBinding
 
-
 class AnaSayfaFragment : Fragment() {
     private lateinit var binding: FragmentAnaSayfaBinding
     //private lateinit var menuList :ArrayList<Menu>
@@ -20,11 +19,8 @@ class AnaSayfaFragment : Fragment() {
     ): View? {
         binding = FragmentAnaSayfaBinding.inflate(layoutInflater)
         return binding.root
-
         // Inflate the layout for this fragment
-
         //return inflater.inflate(R.layout.fragment_ana_sayfa, container, false)
-
     }
 
 

@@ -38,7 +38,8 @@ class AnaYemekFragment : Fragment() {
         binding.floatingActionButton.setOnClickListener {
             val actionAnaYemekEkle = AnaYemekFragmentDirections.actionAnaYemekFragmentToEkleFragment("Ana Yemek")
             Navigation.findNavController(it).navigate(actionAnaYemekEkle)
-
         }
+
+
     }
 }

@@ -13,13 +13,7 @@ class MenuAdapter(private var menuList:ArrayList<Menu>):RecyclerView.Adapter<Men
     class MenuCardTasarim( var MenuCardTasarimBinding : MenuCardTasarimBinding):RecyclerView.ViewHolder(MenuCardTasarimBinding.root)
 
 
-    /*inner class MenuCardTasarim() : RecyclerView.ViewHolder(){ //üst klastan erişim izni veriyor.
 
-        fun bind(item:Menu){
-            menuList
-        }
-    }
-*/
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuCardTasarim {
        val layoutInflater = LayoutInflater.from(parent.context)
         val MenuCardTasarimBinding = MenuCardTasarimBinding.inflate(layoutInflater,parent,false)
@@ -32,7 +26,7 @@ class MenuAdapter(private var menuList:ArrayList<Menu>):RecyclerView.Adapter<Men
 
 
         holder.MenuCardTasarimBinding.menuimageView.setImageResource(menu.menuGorsel)
-        holder.MenuCardTasarimBinding.yemekTurtextView.text = menu.menuTur
+        holder.MenuCardTasarimBinding.yemekTurTextView.text = menu.menuTur
         //holder.bind(menuList[position])
 
 

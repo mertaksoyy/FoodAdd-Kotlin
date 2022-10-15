@@ -6,93 +6,90 @@
     android:layout_height="match_parent"
     tools:context=".EkleFragment">
 
-    <EditText
-        android:id="@+id/restoranAdeditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.92"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/restorantextView"
-        android:layout_width="156dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="80dp"
-        android:gravity="center"
-        android:text="Restoran Adı Giriniz : "
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.027"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/restoranAdresEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="232dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/buttonEkle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.92"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/restoranAdrestextView"
-        android:layout_width="161dp"
-        android:layout_height="22dp"
-        android:layout_marginBottom="368dp"
-        android:gravity="center"
-        android:text="Restoran Adresi Giriniz : "
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.064"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <Button
         android:id="@+id/buttonEkle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="76dp"
-        android:text="Lezzet EKle"
+        android:layout_width="151dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginBottom="104dp"
+        android:background="#FFFFFF"
+        android:text="Ekle"
+        app:icon="@android:drawable/ic_input_add"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/restoranPuantextView"
-        android:layout_width="214dp"
-        android:layout_height="26dp"
-        android:layout_marginBottom="208dp"
-        android:gravity="center"
-        android:text="Restoran İçin Puan Giriniz  : "
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/puaneditTextNumber"
-        app:layout_constraintHorizontal_bias="0.32"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/puaneditTextNumber"
-        android:layout_width="109dp"
-        android:layout_height="42dp"
-        android:layout_marginBottom="208dp"
+        android:layout_width="176dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
         android:gravity="right"
-        android:hint="/10"
+        android:hint="/5"
         android:inputType="number"
         android:textColorHint="#0C0C0C"
         android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/buttonEkle" />
+        app:layout_constraintStart_toEndOf="@+id/restoranPuantextView"
+        tools:layout_editor_absoluteY="408dp" />
+
+    <EditText
+        android:id="@+id/yemekAdeditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="71dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/yemektextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/yemektextView"
+        android:layout_width="158dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="87dp"
+        android:gravity="center"
+        android:text="Yemek Adı Giriniz : "
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/restoranAdiEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="126dp"
+        android:layout_marginEnd="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yemekAdeditText" />
+
+    <TextView
+        android:id="@+id/restoranPuantextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="136dp"
+        android:gravity="center"
+        android:text="Restoran İçin Puan Giriniz  : "
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEkle"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/restoranAditextView"
+        android:layout_width="163dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="134dp"
+        android:gravity="center"
+        android:text="Restoran Adı Giriniz : "
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/restoranPuantextView"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

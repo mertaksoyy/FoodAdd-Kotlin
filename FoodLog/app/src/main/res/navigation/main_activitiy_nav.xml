@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/anaYemekFragment"
-        android:name="com.mertaksoy.foodlog.anaYemekFragment"
+        android:name="com.mertaksoy.foodlog.AnaYemekFragment"
         android:label="fragment_ana_yemek"
         tools:layout="@layout/fragment_ana_yemek" >
         <action
