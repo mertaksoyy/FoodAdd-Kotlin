@@ -1,9 +1,12 @@
 package com.mertaksoy.foodlog.data.model
 
+import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 @Entity(tableName = "yemekler_tablo") //sütu kolon işlemleri isimleri vb burada yapılır
 data class YemekModel(
     @PrimaryKey(autoGenerate = true)
@@ -22,4 +25,4 @@ data class YemekModel(
     @ColumnInfo(name = "urun_puan")
     var urunPuan: Int
 
-) : java.io.Serializable
+) : Parcelable

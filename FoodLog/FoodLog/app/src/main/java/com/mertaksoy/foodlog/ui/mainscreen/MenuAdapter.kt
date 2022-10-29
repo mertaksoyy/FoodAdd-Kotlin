@@ -8,7 +8,7 @@ import com.mertaksoy.foodlog.databinding.MenuCardTasarimBinding
 
 class MenuAdapter(
     private var menuList: ArrayList<Menu>,
-    private val onMenuItemClick: (String) -> Unit
+    private val onMenuItemClick: (Menu) -> Unit
 ) : RecyclerView.Adapter<MenuAdapter.MenuCardTasarim>() {
 
     inner class MenuCardTasarim(private val binding: MenuCardTasarimBinding) :
@@ -20,7 +20,7 @@ class MenuAdapter(
                     menuimageView.setImageResource(menuItem.menuGorsel)
                     yemekTurTextView.text = menuItem.menuTur
                     itemView.setOnClickListener {
-                        onMenuItemClick(menuItem.menuTur)
+                        onMenuItemClick(menuItem)
                     }
                 }
             }

@@ -31,25 +31,34 @@ class FoodFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.ivFood.setImageResource(args.menu.menuGorsel)
         foodDB = YemeklerDataBase.getYemeklerDatabase(requireContext())
 
-        val foodList = foodDB?.yemekDao?.urunlerGetir(args.foodType)
+        val foodList = foodDB?.yemekDao?.urunlerGetir(args.menu.menuTur)
 
         if (foodList != null) {
             val foodAdapter = UrunAdapter(foodList)
-            binding.rvFood.layoutManager =
-                GridLayoutManager(context, 2, GridLayoutManager.VERTICAL, false)
+            binding.rvFood.layoutManager = GridLayoutManager(context, 2, GridLayoutManager.VERTICAL, false)
             binding.rvFood.adapter = foodAdapter
             binding.rvFood.setHasFixedSize(true)
+
         } else {
             binding.rvFood.visibility = View.GONE
             //binding.tvEmpty.visibility = View.VISIBLE
         }
 
         binding.floatingActionButton.setOnClickListener {
-            val action =
-                FoodFragmentDirections.actionFoodFragmentToEkleFragment(args.foodType)
+            val action = FoodFragmentDirections.actionFoodFragmentToEkleFragment(args.menu)
             it.findNavController().navigate(action)
         }
+
+
+        /*binding.rvFood.setOnClickListener {
+            val action = FoodFragmentDirections.actionFoodFragmentToGuncelleFragment()
+            it.findNavController().navigate(action)
+
+        }*/
+
+
     }
 }

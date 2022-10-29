@@ -11,8 +11,8 @@
         android:layout_width="151dp"
         android:layout_height="48dp"
         android:layout_marginStart="128dp"
-        android:layout_marginBottom="104dp"
-        android:background="#FFFFFF"
+        android:layout_marginBottom="100dp"
+        android:background="#FF5722"
         android:text="Ekle"
         app:icon="@android:drawable/ic_input_add"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -31,8 +31,9 @@
         app:layout_constraintStart_toEndOf="@+id/restoranPuantextView"
         app:layout_constraintTop_toTopOf="@+id/restoranPuantextView" />
 
+
     <EditText
-        android:id="@+id/yemekAdeditText"
+        android:id="@+id/yemekAdiEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -58,12 +59,12 @@
         android:id="@+id/restoranAdiEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="126dp"
         android:layout_marginEnd="12dp"
         android:ems="10"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/restoranAditextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/yemekAdeditText" />
+        app:layout_constraintTop_toTopOf="@+id/restoranAditextView" />
 
     <TextView
         android:id="@+id/restoranPuantextView"

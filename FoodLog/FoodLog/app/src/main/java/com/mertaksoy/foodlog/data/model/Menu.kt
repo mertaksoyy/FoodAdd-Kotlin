@@ -1,3 +1,7 @@
 package com.mertaksoy.foodlog.data.model
 
-data class Menu(val menuGorsel: Int, val menuTur: String)
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
+data class Menu(val menuGorsel: Int, val menuTur: String):Parcelable
