@@ -1,3 +1,3 @@
 # FoodLog
- FoodLog App
+ # FoodLog App
  App for your favorite food and drink
