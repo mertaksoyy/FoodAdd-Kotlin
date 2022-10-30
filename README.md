@@ -1,5 +1,4 @@
-# FoodLog
-# For your favorite food and drink
+# FoodLog for your favorite food and drink
 
 ## Project Photos:
 ![foodLogSplashScreen](https://user-images.githubusercontent.com/50530097/198889857-203ece47-4055-490c-bc63-951cc4a47939.JPG)
