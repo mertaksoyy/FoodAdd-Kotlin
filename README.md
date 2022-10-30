@@ -1,5 +1,4 @@
 # FoodLog
-# FoodLog App
-#App for your favorite food and drink
+# FoodLog App for your favorite food and drink
 
 ## Proje Adımları:
