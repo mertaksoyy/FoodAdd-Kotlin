@@ -1,93 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/hellologin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.addfood.EkleFragment">
 
-    <Button
-        android:id="@+id/buttonEkle"
-        android:layout_width="151dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginBottom="100dp"
-        android:background="#FF5722"
-        android:text="Ekle"
-        app:icon="@android:drawable/ic_input_add"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="195dp"
+        android:layout_height="185dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatRatingBar
         android:id="@+id/rating_bar"
         style="@style/Widget.AppCompat.RatingBar.Indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="40dp"
+        android:background="#D8731A"
         android:isIndicator="false"
         android:stepSize="1"
-        app:layout_constraintBottom_toBottomOf="@+id/restoranPuantextView"
+        app:layout_constraintEnd_toEndOf="@+id/yemekAdiEditText"
+        app:layout_constraintStart_toStartOf="@+id/yemekAdiEditText"
+        app:layout_constraintTop_toBottomOf="@+id/restoranPuantextView"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonEkle"
+        android:layout_width="151dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#FF5722"
+        android:text="Ekle"
+        app:icon="@android:drawable/ic_input_add"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/restoranPuantextView"
-        app:layout_constraintTop_toTopOf="@+id/restoranPuantextView" />
-
-
-    <EditText
-        android:id="@+id/yemekAdiEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="71dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toEndOf="@+id/yemektextView"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/yemektextView"
-        android:layout_width="158dp"
-        android:layout_height="22dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="87dp"
-        android:gravity="center"
-        android:text="Yemek Adı Giriniz : "
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/restoranAdiEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="@+id/restoranAditextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/restoranAditextView" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/restoranPuantextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="#D8731A"
+        android:gravity="center"
+        android:text="Restoran İçin Puan Giriniz "
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restoranAdiEditText"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/yemekAdiEditText"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="136dp"
-        android:gravity="center"
-        android:text="Restoran İçin Puan Giriniz  : "
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/buttonEkle"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="20dp"
+        app:boxCornerRadiusBottomEnd="30dp"
+        app:boxCornerRadiusBottomStart="30dp"
+        app:boxCornerRadiusTopEnd="30dp"
+        app:boxCornerRadiusTopStart="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6">
 
-    <TextView
-        android:id="@+id/restoranAditextView"
-        android:layout_width="163dp"
-        android:layout_height="22dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="134dp"
-        android:gravity="center"
-        android:text="Restoran Adı Giriniz : "
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/restoranPuantextView"
-        app:layout_constraintStart_toStartOf="parent" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/yemekAdiEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Yemek Adı Giriniz" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/restoranAdiEditText"
+        android:layout_width="0dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        app:boxCornerRadiusBottomEnd="30dp"
+        app:boxCornerRadiusBottomStart="30dp"
+        app:boxCornerRadiusTopEnd="30dp"
+        app:boxCornerRadiusTopStart="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yemekAdiEditText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/restoranAdiEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Restoran Adı Giriniz" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

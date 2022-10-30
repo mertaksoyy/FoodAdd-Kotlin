@@ -38,8 +38,8 @@ class EkleFragment : Fragment() {
         }
 
         binding.buttonEkle.setOnClickListener {
-            val urunAd = binding.yemekAdiEditText.text.toString()
-            val urunRestoranAd = binding.restoranAdiEditText.text.toString()
+            val urunAd = binding.yemekAdiEdit.text.toString()
+            val urunRestoranAd = binding.restoranAdiEdit.text.toString()
 
             if (urunAd.isNotEmpty() && urunRestoranAd.isNotEmpty() && urunPuanGirdi != 0f) {
                 yemeklerDB?.yemekDao?.urunEkle(

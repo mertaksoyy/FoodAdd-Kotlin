@@ -15,7 +15,6 @@ class MenuAdapter(
         RecyclerView.ViewHolder(binding.root) {
 
             fun bind(menuItem: Menu) {
-
                 with(binding) {
                     menuimageView.setImageResource(menuItem.menuGorsel)
                     yemekTurTextView.text = menuItem.menuTur
