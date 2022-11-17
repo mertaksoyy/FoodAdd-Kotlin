@@ -29,12 +29,12 @@ class AnaSayfaFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val menuList = arrayListOf(
-            Menu(R.drawable.food, "Ana Yemek"),
-            Menu(R.drawable.soup, "Çorba"),
-            Menu(R.drawable.burger, "Hamburger"),
-            Menu(R.drawable.salad, "Salata"),
-            Menu(R.drawable.drink, "İçecek"),
-            Menu(R.drawable.icecream, "Tatlı")
+            Menu(R.drawable.food, "Main Course"),
+            Menu(R.drawable.soup, "Soup"),
+            Menu(R.drawable.hamburger, "Hamburger"),
+            Menu(R.drawable.salad, "Salad"),
+            Menu(R.drawable.drink, "Drink"),
+            Menu(R.drawable.dessert, "Dessert")
         )
 
         val menulerAdapter = MenuAdapter(menuList) {

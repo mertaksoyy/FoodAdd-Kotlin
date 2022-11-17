@@ -12,7 +12,9 @@
         tools:layout="@layout/fragment_ana_sayfa" >
         <action
             android:id="@+id/action_anaSayfaFragment_to_foodFragment"
-            app:destination="@id/foodFragment" />
+            app:destination="@id/foodFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popEnterAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/ekleFragment"
@@ -35,7 +37,9 @@
         tools:layout="@layout/fragment_food" >
         <action
             android:id="@+id/action_foodFragment_to_ekleFragment"
-            app:destination="@id/ekleFragment" />
+            app:destination="@id/ekleFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popEnterAnim="@android:anim/slide_out_right" />
         <action
             android:id="@+id/action_foodFragment_to_guncelleFragment"
             app:destination="@id/guncelleFragment" />
@@ -60,6 +64,7 @@
         <action
             android:id="@+id/action_splashFragment_to_anaSayfaFragment"
             app:destination="@id/anaSayfaFragment"
+            app:enterAnim="@android:anim/fade_in"
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true" />
     </fragment>
