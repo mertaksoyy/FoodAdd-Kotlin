@@ -37,6 +37,7 @@
         android:layout_width="150dp"
         android:layout_height="84dp"
         android:layout_marginTop="50dp"
+        android:autoText="false"
         android:fontFamily="@font/foodlog"
         android:gravity="center"
         android:text="FoodLog"

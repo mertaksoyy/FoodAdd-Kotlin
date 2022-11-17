@@ -15,8 +15,6 @@ class UrunAdapter: RecyclerView.Adapter<UrunAdapter.UrunCardTasarim>() {
 
     inner class UrunCardTasarim(private val binding: UrunCardTasarimBinding) :
         RecyclerView.ViewHolder(binding.root) {
-
-
             fun bind(item: YemekModel) {
                 with(binding) {
                     yemekAditextView.text = item.urunAd

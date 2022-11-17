@@ -35,7 +35,7 @@
         android:layout_marginBottom="20dp"
         android:clickable="true"
         android:src="@android:drawable/ic_input_add"
-        app:backgroundTint="#FF5722"
+        app:backgroundTint="@color/card_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

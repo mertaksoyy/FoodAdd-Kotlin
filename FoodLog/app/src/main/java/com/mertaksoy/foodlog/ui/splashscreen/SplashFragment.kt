@@ -20,7 +20,7 @@ class SplashFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        object: CountDownTimer(4000, 1000) {
+        object: CountDownTimer(1000, 1000) {
 
             override fun onTick(millisUntilFinished: Long) { }
 
