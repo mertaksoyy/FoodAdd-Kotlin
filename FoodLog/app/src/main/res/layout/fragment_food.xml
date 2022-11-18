@@ -7,16 +7,17 @@
     android:layout_height="match_parent"
     tools:context=".ui.food.FoodFragment">
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/backFoodMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:scaleX="1.4"
-        android:src="@drawable/hellologin"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/rv_food"
-        app:layout_constraintTop_toTopOf="@+id/iv_food" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:src="?attr/actionModeCloseDrawable"
+        app:backgroundTint="#F44336"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_food"
@@ -43,6 +44,7 @@
         android:id="@+id/iv_food"
         android:layout_width="0dp"
         android:layout_height="200dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/food"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

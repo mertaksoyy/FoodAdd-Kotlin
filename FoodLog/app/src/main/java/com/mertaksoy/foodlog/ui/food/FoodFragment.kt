@@ -41,6 +41,13 @@ class FoodFragment : Fragment() {
 
         setData()
 
+
+        binding.backFoodMenu.setOnClickListener {
+            val action = FoodFragmentDirections.actionFoodFragmentToAnaSayfaFragment()
+            it.findNavController().navigate(action)
+        }
+
+
         foodAdapter.onMenuItemClick = {
             setFragmentResultListener("Detail") { _, bundle ->
                 bundle.getBoolean("isUpdate").let { bool ->

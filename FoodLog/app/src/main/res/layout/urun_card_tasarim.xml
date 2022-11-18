@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="15dp"
-    app:cardBackgroundColor="@color/card_color"
+    app:cardBackgroundColor="#E3EDD7"
     app:cardCornerRadius="20dp"
     app:cardElevation="10dp">
 
@@ -57,6 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:numStars="5"
+            android:progressTint="@color/black"
             android:stepSize="1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/yemekAditextView"

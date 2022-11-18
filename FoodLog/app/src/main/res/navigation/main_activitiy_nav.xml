@@ -46,6 +46,10 @@
         <argument
             android:name="menu"
             app:argType="com.mertaksoy.foodlog.data.model.Menu" />
+        <action
+            android:id="@+id/action_foodFragment_to_anaSayfaFragment"
+            app:destination="@id/anaSayfaFragment"
+            app:exitAnim="@android:anim/slide_out_right" />
     </fragment>
     <dialog
         android:id="@+id/guncelleFragment"
