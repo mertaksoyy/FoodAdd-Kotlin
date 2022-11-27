@@ -2,14 +2,12 @@ package com.mertaksoy.foodlog.ui.splashscreen
 
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.mertaksoy.foodlog.R
-import kotlin.math.log
 
 
 class SplashFragment : Fragment() {

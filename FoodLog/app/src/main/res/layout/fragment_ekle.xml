@@ -19,9 +19,9 @@
         android:isIndicator="false"
         android:progressTint="@color/black"
         android:stepSize="1"
-        app:layout_constraintEnd_toEndOf="@+id/restoranAdiEditText"
-        app:layout_constraintStart_toStartOf="@+id/restoranAdiEditText"
-        app:layout_constraintTop_toBottomOf="@+id/restoranAdiEditText"
+        app:layout_constraintEnd_toEndOf="@+id/yemekAdiEditText"
+        app:layout_constraintStart_toStartOf="@+id/yemekAdiEditText"
+        app:layout_constraintTop_toBottomOf="@+id/restoranAdresText"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -34,8 +34,8 @@
         android:textColor="@color/white"
         app:icon="@android:drawable/ic_input_add"
         app:iconTint="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/rating_bar"
-        app:layout_constraintStart_toStartOf="@+id/rating_bar"
+        app:layout_constraintEnd_toEndOf="@+id/yemekAdiEditText"
+        app:layout_constraintStart_toStartOf="@+id/yemekAdiEditText"
         app:layout_constraintTop_toBottomOf="@+id/rating_bar" />
 
     <TextView
@@ -62,6 +62,7 @@
         android:layout_width="361dp"
         android:layout_height="60dp"
         android:layout_marginTop="30dp"
+        android:baselineAligned="false"
         app:boxCornerRadiusBottomEnd="30dp"
         app:boxCornerRadiusBottomStart="30dp"
         app:boxCornerRadiusTopEnd="30dp"
@@ -77,6 +78,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Food Name"
+            android:linksClickable="false"
+            android:singleLine="true"
             tools:layout_editor_absoluteY="5dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -85,7 +88,7 @@
         android:layout_width="280dp"
         android:layout_height="199dp"
         android:layout_marginTop="20dp"
-        android:src="@drawable/update_background"
+        android:src="@drawable/foodfavgray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -110,7 +113,34 @@
             android:id="@+id/restoranAdiEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Restaurant Name" />
+            android:hint="Restaurant Name"
+            android:singleLine="true" />
     </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/restoranAdresText"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="366dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="30dp"
+        app:boxCornerRadiusBottomEnd="30dp"
+        app:boxCornerRadiusBottomStart="30dp"
+        app:boxCornerRadiusTopEnd="30dp"
+        app:boxCornerRadiusTopStart="30dp"
+        app:boxStrokeColor="@color/black"
+        app:hintTextColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/yemekAdiEditText"
+        app:layout_constraintStart_toStartOf="@+id/yemekAdiEditText"
+        app:layout_constraintTop_toBottomOf="@+id/restoranAdiEditText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/restoranAdrestEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Restaurant  Address"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

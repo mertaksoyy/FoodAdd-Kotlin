@@ -2,9 +2,7 @@ package com.mertaksoy.foodlog.ui.food
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.mertaksoy.foodlog.data.model.Menu
 import com.mertaksoy.foodlog.data.model.YemekModel
 import com.mertaksoy.foodlog.databinding.UrunCardTasarimBinding
 
@@ -20,6 +18,7 @@ class UrunAdapter: RecyclerView.Adapter<UrunAdapter.UrunCardTasarim>() {
                     yemekAditextView.text = item.urunAd
                     restoranAditextView.text = item.restoranAd
                     ratingBar.progress = item.urunPuan
+                    restoranAdrestextView.text = item.urunAdres
                     cardFood.setOnClickListener {
                         onMenuItemClick(item)
                     }

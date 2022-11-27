@@ -39,7 +39,7 @@ class FoodFragment : Fragment() {
 
         foodDB = YemeklerDataBase.getYemeklerDatabase(requireContext())
 
-        setData()
+       setData()
 
 
         binding.backFoodMenu.setOnClickListener {
@@ -79,7 +79,6 @@ class FoodFragment : Fragment() {
 
         } else {
             binding.rvFood.visibility = View.GONE
-            //binding.tvEmpty.visibility = View.VISIBLE
         }
     }
 }

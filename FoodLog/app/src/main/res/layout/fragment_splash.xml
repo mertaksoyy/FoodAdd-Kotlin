@@ -14,7 +14,7 @@
         android:layout_width="289dp"
         android:layout_height="287dp"
         android:layout_marginTop="100dp"
-        android:src="@drawable/splashscreen"
+        android:src="@drawable/foodfav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,7 +23,7 @@
         android:id="@+id/imageView6"
         android:layout_width="312dp"
         android:layout_height="116dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="50dp"
         android:src="@drawable/foodlog_splash_text"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
         app:layout_constraintStart_toStartOf="@+id/imageView3"

@@ -31,7 +31,6 @@
             android:text="TextView"
             android:textSize="14sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/restoranAditextView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -40,14 +39,12 @@
             android:id="@+id/restoranAditextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="TextView"
             android:textSize="14sp"
-            app:layout_constraintBottom_toTopOf="@+id/rating_bar"
-            app:layout_constraintEnd_toEndOf="@+id/yemekAditextView"
-            app:layout_constraintStart_toStartOf="@+id/yemekAditextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/yemekAditextView" />
 
         <androidx.appcompat.widget.AppCompatRatingBar
@@ -55,13 +52,23 @@
             style="@style/Widget.AppCompat.RatingBar.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
             android:numStars="5"
             android:progressTint="@color/black"
             android:stepSize="1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/yemekAditextView"
-            app:layout_constraintStart_toStartOf="@+id/yemekAditextView"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/restoranAdrestextView" />
+
+        <TextView
+            android:id="@+id/restoranAdrestextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/restoranAditextView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

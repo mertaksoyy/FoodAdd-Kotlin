@@ -23,6 +23,10 @@ data class YemekModel(
     var restoranAd: String,
 
     @ColumnInfo(name = "urun_puan")
-    var urunPuan: Int
+    var urunPuan: Int,
+
+    @ColumnInfo(name = "urun_adres")
+    var urunAdres: String
+
 
 ) : Parcelable

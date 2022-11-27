@@ -40,17 +40,18 @@ class EkleFragment : Fragment() {
         binding.buttonEkle.setOnClickListener {
             val urunAd = binding.yemekAdiEdit.text.toString()
             val urunRestoranAd = binding.restoranAdiEdit.text.toString()
+            val urunAdres = binding.restoranAdrestEdit.text.toString()
 
-            if (urunAd.isNotEmpty() && urunRestoranAd.isNotEmpty() && urunPuanGirdi != 0f) {
+            if (urunAd.isNotEmpty() && urunRestoranAd.isNotEmpty() && urunAdres.isNotEmpty() && urunPuanGirdi != 0f) {
                 yemeklerDB?.yemekDao?.urunEkle(
                     YemekModel(
                         urunTur = args.menu.menuTur,
                         urunAd = urunAd,
                         restoranAd = urunRestoranAd,
-                        urunPuan = urunPuanGirdi.toInt()
+                        urunPuan = urunPuanGirdi.toInt(),
+                        urunAdres = urunAdres
                     )
                 )
-                //val action = EkleFragmentDirections.actionEkleFragmentToFoodFragment(args.menu)
                 it.findNavController().navigateUp()
             } else {
                 Toast.makeText(context, "Boş olamaz", Toast.LENGTH_SHORT).show()

@@ -8,17 +8,12 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.setFragmentResult
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.mertaksoy.foodlog.data.model.YemekModel
 import com.mertaksoy.foodlog.data.source.local.YemeklerDataBase
-
 import com.mertaksoy.foodlog.databinding.FragmentGuncelleBinding
-import com.mertaksoy.foodlog.ui.food.FoodFragmentArgs
-import com.mertaksoy.foodlog.ui.food.UrunAdapter
 
 
 class GuncelleFragment : BottomSheetDialogFragment() {
@@ -42,6 +37,7 @@ class GuncelleFragment : BottomSheetDialogFragment() {
         binding.yemekAdiEditText.setText(args.foodModel.urunAd)
         binding.restoranAdiEditText.setText(args.foodModel.restoranAd)
         binding.ratingBar.progress = args.foodModel.urunPuan
+        binding.restorantAdresEditText.setText(args.foodModel.urunAdres)
 
         var urunPuanGirdi = args.foodModel.urunPuan
         binding.ratingBar.setOnRatingBarChangeListener { _, fl, _ ->
@@ -52,15 +48,17 @@ class GuncelleFragment : BottomSheetDialogFragment() {
 
             val urunAd = binding.yemekAdiEditText.text.toString()
             val urunRestoranAd = binding.restoranAdiEditText.text.toString()
+            val urunAdres = binding.restorantAdresEditText.text.toString()
 
-            if (urunAd.isNotEmpty() && urunRestoranAd.isNotEmpty() && urunPuanGirdi != 0) {
+            if (urunAd.isNotEmpty() && urunRestoranAd.isNotEmpty() && urunAdres.isNotEmpty() && urunPuanGirdi != 0) {
                 yemeklerDB?.yemekDao?.urunGuncelle(
                     YemekModel(
                         id = args.foodModel.id,
                         urunTur = args.foodModel.urunTur,
                         urunAd = urunAd,
                         restoranAd = urunRestoranAd,
-                        urunPuan = urunPuanGirdi
+                        urunPuan = urunPuanGirdi,
+                        urunAdres = urunAdres
                     )
                 )
                 setFragmentResult("Detail", bundleOf("isUpdate" to true))

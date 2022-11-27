@@ -8,12 +8,12 @@ plugins {
 
 android {
     namespace 'com.mertaksoy.foodlog'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.mertaksoy.foodlog"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -54,6 +54,7 @@ dependencies {
     //kotlin
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
     //roomDatabase
     implementation "androidx.room:room-runtime:2.4.3"
     kapt "androidx.room:room-compiler:2.4.3"
@@ -62,6 +63,9 @@ dependencies {
     //coroutine
     implementation "androidx.room:room-ktx:2.3.0"
     implementation "androidx.lifecycle:lifecycle-runtime"
+
+    //Scalable DP and SP
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
 
 
 
