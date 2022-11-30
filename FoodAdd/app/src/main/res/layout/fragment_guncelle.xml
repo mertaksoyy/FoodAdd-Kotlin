@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:centerColor="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_background"
+    android:padding="20dp"
+    tools:context=".ui.addfood.GuncelleFragment">
+
+    <Button
+        android:id="@+id/buttonGuncelle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#E4EFCD"
+        android:text="Update"
+        android:textColor="@color/black"
+        app:icon="@drawable/ic_baseline_change_circle_24"
+        app:iconSize="30sp"
+        app:iconTint="#222020"
+        app:layout_constraintEnd_toEndOf="@+id/restoranPuantextView"
+        app:layout_constraintStart_toStartOf="@+id/restoranPuantextView"
+        app:layout_constraintTop_toBottomOf="@+id/rating_bar" />
+
+    <TextView
+        android:id="@+id/restoranPuantextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Rate"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/yemekAdiEditText"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/restoranAditextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Restaurant Name:"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/yemektextView"
+        app:layout_constraintStart_toStartOf="@+id/yemektextView"
+        app:layout_constraintTop_toBottomOf="@+id/yemektextView" />
+
+    <EditText
+        android:id="@+id/restoranAdiEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/restoranAditextView"
+        app:layout_constraintEnd_toEndOf="@+id/yemekAdiEditText"
+        app:layout_constraintStart_toStartOf="@+id/yemekAdiEditText"
+        app:layout_constraintTop_toTopOf="@+id/restoranAditextView" />
+
+    <EditText
+        android:id="@+id/yemekAdiEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/yemektextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/yemektextView" />
+
+    <TextView
+        android:id="@+id/yemektextView"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:text="Food Name : "
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/yemekAdiEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+        android:id="@+id/rating_bar"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:isIndicator="false"
+        android:numStars="5"
+        android:progressTint="@color/black"
+        android:stepSize="1"
+        app:layout_constraintEnd_toEndOf="@+id/restoranPuantextView"
+        app:layout_constraintStart_toStartOf="@+id/restoranPuantextView"
+        app:layout_constraintTop_toBottomOf="@+id/restoranPuantextView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Restaurant Address: "
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/yemektextView"
+        app:layout_constraintStart_toStartOf="@+id/yemektextView"
+        app:layout_constraintTop_toBottomOf="@+id/restoranAditextView" />
+
+    <EditText
+        android:id="@+id/restorantAdresEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="@+id/yemekAdiEditText"
+        app:layout_constraintStart_toStartOf="@+id/yemekAdiEditText"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
