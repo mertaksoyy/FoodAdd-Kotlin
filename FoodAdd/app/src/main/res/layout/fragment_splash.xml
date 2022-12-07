@@ -11,19 +11,19 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="289dp"
-        android:layout_height="287dp"
-        android:layout_marginTop="100dp"
-        android:src="@drawable/foodfav"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_marginTop="@dimen/_80sdp"
+        android:src="@drawable/foodadd_splash"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="312dp"
-        android:layout_height="116dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_50sdp"
         android:src="@drawable/foodlog_splash_text"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
         app:layout_constraintStart_toStartOf="@+id/imageView3"
